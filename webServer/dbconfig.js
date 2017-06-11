@@ -1,11 +1,13 @@
 /**
- * Created by Tory on 2017/6/10.
+ * Created by lzhan on 2017/6/10.
  */
-var mysql      = require('mysql');
-var connection = mysql.createConnection({
-    host     : 'localhost',
-    user     : 'me',
-    password : 'secret',
-    database : 'my_db'
-});
-connection.connect();
+var option = {
+    host: 'localhost',
+    user: 'root',
+    port:'3306',
+    password: '',
+    database: ''
+
+};
+
+exports.option=option;

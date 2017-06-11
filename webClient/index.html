@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+    <style>
+        .container{
+            width: 100%;
+            height: auto;
+
+        }
+        nav{
+            width: 70%;
+            height: auto;
+            margin: auto;
+        }
+
+        nav #_search{
+            width: 200px;
+            height: 40px;
+            border: solid 1px grey;
+        }
+        nav button{
+            width: 100px;
+            height: 40px;
+            border: solid 1px grey;
+        }
+
+        .type .div-type{
+            width: 80%;
+            height: 40px;
+            font-size: 28px;
+            margin: auto;
+            margin-top: 15px;
+        }
+        .booktype{
+            display: inline-block;
+        }
+        .typevalue{
+            display: inline-block;
+        }
+        .div-type ul{
+            list-style: none;
+
+        }
+
+        .div-type ul li{
+            float: left;
+            margin-left: 20px;
+
+        }
+        .div-type ul li a{
+            text-decoration: none;
+            color: black;
+            display: block;
+            height: 30px;
+            width: 80px;
+        }
+
+        .div-type ul li a:focus{
+            background: grey;
+        }
+
+    </style>
+    <script src="../js/jquery-2.1.1.js"></script>
+</head>
+<body>
+    <div class="container">
+        <nav>
+
+            <input type="search" id="_search">
+            <button id="btnsearch">serarch</button>
+        </nav>
+        <section class="type">
+            <div class="div-type">
+                <div class="booktype">书籍分类</div>
+                <div class="typevalue" id="typevalue">
+                    <ul>
+
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        $(function () {
+            condition={
+                search:'',
+                type:'',
+                pageIndex:'',
+                sort:''
+            };
+            $.ajax({
+                type:'get',
+                url:'data/type.json',
+                dataType:'json',
+                success:function (data) {
+                    for(var i=0,len=data.length;i<len;i++){
+                        $('#typevalue ul').append(
+                            `<li class="booktypevalue">
+                            <a href="javascript:void 0">${data[i]}</a>
+                            </li>`
+                        )
+                    }
+                }
+            });
+
+
+            $(document).on('click','#typevalue ul li a',function () {
+                condition.type=$(this).text();
+
+                getData();
+            });
+
+            $('#btnsearch').click(function () {
+                condition.type=$('#_search').val();
+                getData();
+            })
+        })
+
+
+        function getData(condition) {
+
+        }
+
+        function showData(arr) {
+
+        }
+        
+        function showPageIndex() {
+            
+        }
+    </script>
+</body>
+</html>

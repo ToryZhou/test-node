@@ -1,0 +1,74 @@
+[
+  {
+    "id": "b001",
+    "name": "浮生六计",
+    "author": "汪涵",
+    "price": 22.8,
+    "comments": 223000,
+    "sall_type": 0,
+    "icon": "book01.jpg",
+    "count":1,
+    "isSelected":false,
+    "publishDate":1488297600
+  },
+  {
+    "id": "b0011",
+    "name": "三国演义",
+    "author": "罗贯中",
+    "price": 1,
+    "comments": 122300,
+    "sall_type": 1,
+    "icon": "book01.jpg",
+    "count":1,
+    "isSelected":true,
+    "publishDate":"2014/3/15"
+  },
+  {
+    "id": "b003",
+    "name": "西游记",
+    "author": "吴承恩",
+    "price": 122.8,
+    "comments": 823000,
+    "sall_type": 0,
+    "icon": "book01.jpg",
+    "count":1,
+    "isSelected":true,
+    "publishDate":"2016/3/5"
+  },
+  {
+    "id": "b0015",
+    "name": "水浒传",
+    "author": "施耐庵2号",
+    "price": 222.8,
+    "comments": 245000,
+    "sall_type": 1,
+    "icon": "book01.jpg",
+    "count":1,
+    "isSelected":false,
+    "publishDate":"2017/8/5"
+  },
+  {
+    "id": "b006",
+    "name": "在水一方",
+    "author": "施耐庵",
+    "price": 222.8,
+    "comments": 245000,
+    "sall_type": 0,
+    "icon": "book01.jpg",
+    "count":1,
+    "isSelected":false,
+    "publishDate":"2011/7/5"
+  },
+  {
+    "id": "b007",
+    "name": "红楼梦",
+    "author": "曹雪芹",
+    "price": 52.8,
+    "comments": 223000,
+    "sall_type": 1,
+    "icon": "book01.jpg",
+    "count":1,
+    "isSelected":false,
+    "publishDate":"2009/3/25"
+  }
+]

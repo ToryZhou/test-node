@@ -2,9 +2,62 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>login</title>
+    <script src="../js/jquery-2.1.1.js"></script>
 </head>
 <body>
-<form></form>
+<form action="#">
+    <input type="text" id="_userId" name="userId">
+    <p>
+        <div id="err_userid"></div>
+    </p>
+    <input type="text" id="_userPass" name="userPass">
+    <p>
+        <div id="err_pass"></div>
+    </p>
+
+    <input type="checkbox" id="_isRem">remember
+    <input type="button" value="login...." id="_btnLogin">
+</form>
+
+<script>
+    $(function () {
+
+        var isrem=localStorage.getItem('isRem') || null;
+        if(isrem){
+            var user=JSON.parse(localStorage.getItem('user'));
+            $('#_userId').val(user.userid);
+            $('#_userPass').val(user.usepass);
+            $('#_isRem').prop('checked',true);
+
+        }
+
+        $('#_btnLogin').click(function () {
+            var id=$('#_userId').val();
+            var pass=$('#_userPass').val();
+
+            var regs=/^1[345678][0-9]{9}$/;
+
+            if(id.trim().length===0){
+
+            }else{
+                if(regs.test(id)){
+//                    login success
+                    var rem=$('#_isRem').prop('checked');
+                    if(rem){
+                        localStorage.setItem('user',JSON.stringify({userid:id,usepass:pass}));
+                        localStorage.setItem('isRem',true);
+                    }else{
+                        localStorage.removeItem('user');
+                        localStorage.removeItem('isRem');
+                    }
+                }else{
+
+                }
+            }
+
+        })
+    })
+</script>
 </body>
 </html>
