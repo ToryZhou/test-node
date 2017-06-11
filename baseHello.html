@@ -1,0 +1,112 @@
+<html>
+
+<head>
+    <style>
+        .div-shadow-inset {
+            box-shadow: 20px 2px 4px #f00 inset;
+        }
+
+        .div-shadow {
+            box-shadow: 10px 5px 1px #f00;
+            width: 1200px;
+        }
+
+        .text-shadow {
+            text-shadow: 5px 10px 2px #f00;
+        }
+
+        .background-color {
+            background-color: #ff9900;
+        }
+
+        @media screen and(max-width: 1100px) {
+            .div-shadow {
+                box-shadow: 10px 5px 1px #f00;
+                width: 200px;
+            }
+        }
+
+        .div1 {
+            background: #000080;
+            /*border: 1px solid red*/
+        }
+
+        .div2 {
+            background: #800080;
+            border: 1px solid red;
+            height: 100px;
+            margin-top: 10px
+        }
+
+        .left {
+            float: left;
+            width: 20%;
+            height: 200px;
+            background: #DDD
+        }
+
+        .right {
+            float: right;
+            width: 30%;
+            height: 80px;
+            background: #DDD
+        }
+
+        /*清除浮动代码*/
+        .clearfloat {
+            clear: both
+        }
+		
+		.border {
+            border:1px solid #f00;
+        }
+		.background{
+			background-color:#999;
+		
+		}
+		.background-image{
+			background-image:url(default.jpeg);
+			width:80%;
+			height:30%;
+		}
+    </style>
+</head>
+<body>
+
+<div class="div1">
+    <div class="left">Left</div>
+    <div class="right">Right</div>
+    <div class="clearfloat"></div>
+</div>
+<div class="div2">
+    div2
+</div>
+
+<div class="div-shadow">aaaaaaaaa</div>
+<p class="text-shadow background-color" style="font-size: 30px;"> ffffpppppppppppppaaaaap </p>
+<label for="myCar"></label>
+<input id="myCar" list="cars"/>
+<datalist id="cars">
+    <option value="BMW">
+    <option value="Ford">
+    <option value="Volvo">
+</datalist>
+<div class='border background background-image'>
+<p>pppp</p>
+<p>zppppz</p>
+<p>pppp</p>
+</div>
+
+
+<script type="text/javascript">
+    document.write("Hello World!");
+    document.write("<h1>This is a heading</h1>");
+    //    localStorage.setItem("name","zhoutong");
+    //    var prompt2 = prompt("Read","write");
+    //    document.writeln(prompt2);
+
+
+</script>
+
+</body>
+</html>
