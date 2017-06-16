@@ -5,8 +5,8 @@ var option = {
     host: 'localhost',
     user: 'root',
     port:'3306',
-    password: '',
-    database: ''
+    password: 'root',
+    database: 'test_node'
 
 };
 
