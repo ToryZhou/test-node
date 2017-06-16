@@ -3,8 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/login.js"></script>
 </head>
 <body>
-<form></form>
+<form action="#">
+    <input type="text" id="txt-phone">
+    <p>
+    <div id="err_userid"></div>
+    </p>
+    <input type="text" id="txt-password">
+    <p>
+    <div id="err_pass"></div>
+    </p>
+
+    <input type="checkbox" id="_isRem">remember
+    <input type="button" value="login" id="btn-login">
+</form>
 </body>
+
+<script>
+    $(function (){
+        var login = new Login();
+//        login.$document.on('click', '#btn-login', function () {
+//            login.btnLoginClick();
+//        });
+    });
+
+</script>
+
 </html>

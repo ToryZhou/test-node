@@ -1,0 +1,29 @@
+        console.log(user.phone);
+        var client = mysql.createConnection(dbconfig.option);
+        var sql = 'select count(*) as count from user where phone=? and password=?';
+
+        client.query(sql, [user.phone, user.password], function (error, result) {
+            if (error) {
+                console.log(error.message);
+                callback(2);
+                client.end();
+                return;
+            }
+            console.log(result);
+
+            // callback(result[0].count);
+            client.end();
+            response.writeHead(200, {'content-type': 'text/html;charset=utf8', 'Access-Control-Allow-Origin': '*'});
+            response.end(result[0].count + '')
+        });
+
+
+
+        // request.on('end', function () {
+        //     userdao.login(user, function (res) {
+        //         response.writeHead(200, {'content-type': 'text/html;charset=utf8', 'Access-Control-Allow-Origin': '*'});
+        //         response.end(res + '')
+        //     })
+        // });
+
+// var sql='select count(*) as count from user where user_id=? and user_password=?';
