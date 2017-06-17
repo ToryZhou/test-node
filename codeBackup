@@ -27,3 +27,7 @@
         // });
 
 // var sql='select count(*) as count from user where user_id=? and user_password=?';
+
+//        login.$document.on('click', '#btn-login', function () {
+//            login.btnLoginClick();
+//        });

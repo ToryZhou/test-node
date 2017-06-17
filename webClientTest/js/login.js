@@ -15,10 +15,7 @@ Login.prototype.initEvents = function (_this) {
 };
 
 Login.prototype.btnLoginClick = function () {
-    //todo 跨域的问题，ajax请求不
-    $.get('127.0.0.1:3000/users/login?phone=001&password=001',{},function (data) {
-        console.log('1111');
+    $.get('http://127.0.0.1:3000/users/login?phone='+this.$txtPhone.val()+'&password='+this.$txtPassword.val(),{},function (data) {
         console.log(data);
     });
-    console.log('login click');
 };

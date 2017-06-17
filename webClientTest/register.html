@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/register.js"></script>
+</head>
+<body>
+<form>
+    <label for="txt-phone-register">Phone:
+        <input type="text" id="txt-phone-register"/>
+    </label>
+    <br/>
+    <label for="pwd-password-register">Password:
+        <input type="password" id="pwd-password-register"/>
+    </label>
+    <br/>
+    <label for="pwd-password-register-repeat">Password Repeat:
+        <input type="password" id="pwd-password-register-repeat"/>
+    </label>
+    <br/>
+    <input type="button" id="btn-register" value="Register">
+</form>
+</body>
+<script>
+    $(function () {
+        let register = new Register();
+        console.log('register');
+    });
+</script>
+</html>
