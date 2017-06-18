@@ -50,3 +50,16 @@
 /*}*/
 
 // $(window).attr('location','http://localhost:63342/test-node/webClientTest/index.html');
+
+
+        <label for="txt-phone-register">Phone:
+            <input type="text" class="font-size-20 box-text" id="txt-phone-register" placeholder="电话*"/>
+        </label>
+        <p></p>
+        <label for="pwd-password-register">Password:
+            <input type="password" class="font-size-20 box-text" id="pwd-password-register" placeholder="密码*"/>
+        </label>
+        <p></p>
+        <label for="pwd-password-register-repeat">Password Repeat:
+            <input type="password" class="font-size-20 box-text" id="pwd-password-register-repeat" placeholder="确认密码*"/>
+        </label>

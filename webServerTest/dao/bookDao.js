@@ -12,7 +12,7 @@ let bookDao = {
         connection.query(sql,  function (error, data) {
             if(error){
                 console.log(error.message);
-                callback(2);
+                callback(-1);
             }else{
                 callback(data);
             }

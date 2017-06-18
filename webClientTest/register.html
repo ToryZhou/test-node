@@ -6,23 +6,31 @@
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/register.js"></script>
+    <link rel="stylesheet" href="css/register.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-<form>
-    <label for="txt-phone-register">Phone:
-        <input type="text" id="txt-phone-register"/>
-    </label>
-    <br/>
-    <label for="pwd-password-register">Password:
-        <input type="password" id="pwd-password-register"/>
-    </label>
-    <br/>
-    <label for="pwd-password-register-repeat">Password Repeat:
-        <input type="password" id="pwd-password-register-repeat"/>
-    </label>
-    <br/>
-    <input type="button" id="btn-register" value="Register">
-</form>
+<div class="box-first-register">
+    <form>
+        <hr /><br /><br />
+        <label for="txt-phone-register">
+            <input type="text" class="font-size-20 box-text" size="40" id="txt-phone-register" placeholder="电话*"/>
+        </label>
+        <p></p>
+        <label for="pwd-password-register">
+            <input type="password" class="font-size-20 box-text" size="40" id="pwd-password-register" placeholder="密码*"/>
+        </label>
+        <p></p>
+        <label for="pwd-password-register-repeat">
+            <input type="password" class="font-size-20 box-text" size="40" id="pwd-password-register-repeat" placeholder="确认密码*"/>
+        </label>
+        <p id="p-register-error" class="error"></p>
+        <div style="text-align: center;">
+            <input type="button" class="font-size-20 box-text" id="btn-register" value="注册">
+        </div>
+    </form>
+</div>
+
 </body>
 <script>
     $(function () {

@@ -9,7 +9,7 @@ var userDao = {
         client.query(sql, [user.phone, user.password], function (error, result) {
             if (error) {
                 console.log(error.message);
-                callback(2);
+                callback(-1);
                 client.end();
                 return;
             }
@@ -23,7 +23,7 @@ var userDao = {
         client.query(sql, [user.phone, user.password], function (error, result) {
             if (error) {
                 console.log(error.message);
-                callback(2);
+                callback(-1);
                 client.end();
                 return;
             }
