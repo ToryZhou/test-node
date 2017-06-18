@@ -7,3 +7,7 @@
 .error{
     color: orangered;
 }
+.a-text-decoration{
+    color: #428bca;
+    text-decoration:none;
+}
