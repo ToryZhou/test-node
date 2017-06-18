@@ -65,3 +65,7 @@
         </label>
 
         console.log('data' + data);
+
+        _this.$pwdPassword.val('');
+
+    // debugger;

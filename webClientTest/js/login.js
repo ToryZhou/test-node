@@ -26,13 +26,15 @@ Login.prototype.initEvents = function (_this) {
     _this.$pwdPassword.blur(function () {
         _this.pwdPasswordBlur();
     });
-
     let isRem = localStorage.getItem('isRem') || null;
     if (isRem) {
         let user = JSON.parse(localStorage.getItem('user'));
         _this.$chbRemember.prop('checked', true);
         _this.$txtPhone.val(user.phone);
         _this.$pwdPassword.val(user.password);
+    }else{
+        _this.$txtPhone.val('');
+        _this.$pwdPassword.val('');
     }
 };
 

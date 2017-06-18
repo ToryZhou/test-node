@@ -61,3 +61,12 @@ ajax的 type:text
 使用flex 上下左右布局，使用media标签实现电脑，手机适配，不同的屏幕使用不同的CSS。
 
 发送请求的时候前面要写http://
+
+chrome 设置里面管理密码，点击显示，输入操作系统密码可以看到所有网站密码
+
+Chrome浏览器密码框自动填充的bug
+了解决Chrome浏览器密码框自动填充的问题，经过查找资料，此问题已经解决了，就是在原有的input标签前面再加个input标签，并给此input标签设置相应的属性
+<!-- 额外增加的input -->
+<input type="password" style="width:0;height:0;float:left;visibility:hidden"/>
+<!-- 原先的input -->
+<input type="password"/>
