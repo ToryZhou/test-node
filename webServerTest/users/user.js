@@ -1,16 +1,16 @@
 /**
  * Created by Tory on 2017/6/10.
  */
-'use strict'
+'use strict';
 let qstring = require('querystring');
 let url = require('url');
 var userDao = require('./../dao/userDao');
 
 let route = function (req, res) {
     var path = url.parse(req.url).pathname;
-    if (path.indexOf('/login') != -1) {
+    if (path.indexOf('/login') !== -1) {
         user.login(req, res);
-    } else if (path.toLowerCase().indexOf('/adduser') != -1) {
+    } else if (path.toLowerCase().indexOf('/adduser') !== -1) {
         user.addUser(req, res);
     }
 };

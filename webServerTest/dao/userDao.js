@@ -2,7 +2,7 @@
 let mysql = require('mysql');
 let dbconfig = require('./../dbconfig');
 
-var userdao = {
+var userDao = {
     login: function (user, callback) {
         var client = mysql.createConnection(dbconfig.option);
         var sql = 'select count(*) as count from user where phone=? and password=?';
@@ -33,4 +33,4 @@ var userdao = {
     }
 };
 
-module.exports = userdao;
+module.exports = userDao;

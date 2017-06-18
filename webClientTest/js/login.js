@@ -15,7 +15,7 @@ Login.prototype.initEvents = function (_this) {
 };
 
 Login.prototype.btnLoginClick = function () {
-    $.get('http://127.0.0.1:3000/users/login?phone='+this.$txtPhone.val()+'&password='+this.$txtPassword.val(),{},function (data) {
+    $.get(config.contextPath+'/users/login?phone='+this.$txtPhone.val()+'&password='+this.$txtPassword.val(),{},function (data) {
         console.log(data);
     });
 };

@@ -31,3 +31,12 @@
 //        login.$document.on('click', '#btn-login', function () {
 //            login.btnLoginClick();
 //        });
+
+
+        console.log(bookList[0]);
+        console.log(bookList[0].id);
+        // console.log(data[0]);
+        // data.forEach(function (item) {
+        //    console.log(item);
+        // });
+        // console.log(data[0].id);

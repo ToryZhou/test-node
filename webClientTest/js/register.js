@@ -15,7 +15,7 @@ Register.prototype.initEvents = function (_this) {
 };
 Register.prototype.btnRegisterClick = function () {
     var _this = this;
-    $.post('http://127.0.0.1:3000/users/addUser', {
+    $.post(config.contextPath + '/users/addUser', {
         phone: _this.$txtPhoneRegister.val(),
         password: _this.$pwdPasswordRegister.val()
     }, function (data) {
