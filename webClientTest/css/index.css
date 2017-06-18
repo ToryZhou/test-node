@@ -1,0 +1,58 @@
+.container{
+    width: 100%;
+    height: auto;
+
+}
+nav{
+    width: 70%;
+    height: auto;
+    margin: auto;
+}
+
+nav #sch-search{
+    width: 400px;
+    height: 40px;
+    border: solid 1px grey;
+}
+nav button{
+    width: 100px;
+    height: 40px;
+    border: solid 1px grey;
+}
+
+.type .div-type{
+    width: 80%;
+    height: 40px;
+    font-size: 28px;
+    margin: auto;
+    margin-top: 15px;
+}
+
+.book-type{
+    display: inline-block;
+}
+
+.type-value{
+    display: inline-block;
+}
+.div-type ul{
+    list-style: none;
+
+}
+
+.div-type ul li{
+    float: left;
+    margin-left: 20px;
+
+}
+.div-type ul li a{
+    text-decoration: none;
+    color: black;
+    display: block;
+    height: 30px;
+    width: 80px;
+}
+
+.div-type ul li a:focus{
+    background: grey;
+}

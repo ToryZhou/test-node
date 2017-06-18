@@ -6,9 +6,24 @@
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/Index.js"></script>
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-Index
+<div class="container">
+    <nav>
+        <input type="search" id="sch-search">
+        <button id="btn-search">serarch</button>
+    </nav>
+    <section class="type">
+        <div class="div-type">
+            <div class="book-type">书籍分类</div>
+            <div class="type-value" id="div-type-value">
+                <ul>
+                </ul>
+            </div>
+        </div>
+    </section>
+</div>
 </body>
 <script>
     $(function () {

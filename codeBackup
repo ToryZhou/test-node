@@ -69,3 +69,11 @@
         _this.$pwdPassword.val('');
 
     // debugger;
+
+            console.log(bookTypeList[i]);
+            console.log(bookTypeList[i].type);
+
+
+                    <li class="booktypevalue">
+                        <a href="javascript:void 0">小说</a>
+                    </li>
