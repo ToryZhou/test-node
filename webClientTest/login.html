@@ -6,21 +6,30 @@
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/login.js"></script>
+    <link rel="stylesheet" href="css/login.css">
 </head>
 <body>
-<form action="#">
-    <input type="text" id="txt-phone">
-    <p>
-    <div id="err_userid"></div>
-    </p>
-    <input type="text" id="txt-password">
-    <p>
-    <div id="err_pass"></div>
-    </p>
 
-    <input type="checkbox" id="_isRem">remember
-    <input type="button" value="login" id="btn-login">
-</form>
+
+<div class="box-parent">
+    <div class="box">
+        <form action="#">
+            <input type="text" id="txt-phone" placeholder="Phone*">
+            <p>
+            <div id="err_userid"></div>
+            </p>
+            <input type="password" id="pwd-password" placeholder="password*">
+            <p>
+            <div id="err_pass"></div>
+            </p>
+
+            <input type="checkbox" id="_isRem">remember
+            <input type="button" value="login" id="btn-login">
+        </form>
+    </div>
+</div>
+
+
 </body>
 
 <script>

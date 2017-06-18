@@ -1,3 +1,21 @@
 .font-size-13{
      font-size:13px;
  }
+/*html, body {*/
+    /*height: 100%;*/
+/*}*/
+.box-parent{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    height: 20rem;
+}
+
+.box{
+    display: flex;
+    width:50%;
+    height: 50%;
+    justify-content: center;
+    align-items: center;
+}
