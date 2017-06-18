@@ -63,3 +63,5 @@
         <label for="pwd-password-register-repeat">Password Repeat:
             <input type="password" class="font-size-20 box-text" id="pwd-password-register-repeat" placeholder="确认密码*"/>
         </label>
+
+        console.log('data' + data);

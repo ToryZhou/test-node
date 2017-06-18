@@ -30,6 +30,6 @@ Register.prototype.btnRegisterClick = function () {
         phone: _this.$txtPhoneRegister.val(),
         password: _this.$pwdPasswordRegister.val()
     }, function (data) {
-        console.log('data' + data);
+        $(window).attr('location', 'login.html');
     });
 };
