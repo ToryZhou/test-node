@@ -9,31 +9,26 @@
     <link rel="stylesheet" href="css/login.css">
 </head>
 <body>
-
-
-<div class="box-parent">
-    <div class="box">
-        <form action="#">
-            <input type="text" id="txt-phone" placeholder="Phone*">
-            <p>
-            <div id="err_userid"></div>
-            </p>
-            <input type="password" id="pwd-password" placeholder="password*">
-            <p>
-            <div id="err_pass"></div>
-            </p>
-
-            <input type="checkbox" id="_isRem">remember
-            <input type="button" value="login" id="btn-login">
-        </form>
+<div class="box-first">
+    <div class="box-parent">
+        <div class="box">
+            <form action="#">
+                <input type="text" class="box-text font-size-20" id="txt-phone" placeholder="电话号码*">
+                <p id="p-phone-error" class="error"></p>
+                <input type="password" class="box-text font-size-20" id="pwd-password" placeholder="密码*">
+                <p id="p-password-error" class="error"></p>
+                <label for="chb-remember"></label><input type="checkbox" id="chb-remember">记住密码？
+                <input type="button" value="登录" class="box-text font-size-20" style="margin-left: 50px;" id="btn-login">
+                <p> 没有账号,<a href="register.html"  class="a-text-decoration">立即注册</a></p>
+            </form>
+        </div>
     </div>
 </div>
-
 
 </body>
 
 <script>
-    $(function (){
+    $(function () {
         var login = new Login();
     });
 

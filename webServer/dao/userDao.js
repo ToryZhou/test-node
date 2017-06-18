@@ -13,7 +13,7 @@ var userdao={
         client.query(sql,[user.id,user.pass],function (error,result) {
             if(error){
                 console.log(error.message);
-                callback(2);
+                callback(-1);
                 client.end();
                 return;
             }
@@ -29,7 +29,7 @@ var userdao={
         client.query(sql,[user.id,user.pass],function (error,result) {
             if(error){
                 console.log(error.message);
-                callback(2);
+                callback(-1);
                 client.end();
                 return;
             }

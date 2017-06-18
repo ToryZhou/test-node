@@ -44,3 +44,9 @@
 <div class="box">
     <span class="item">aaa</span>
 </div>
+
+/*html, body {*/
+/*height: 100%;*/
+/*}*/
+
+// $(window).attr('location','http://localhost:63342/test-node/webClientTest/index.html');
