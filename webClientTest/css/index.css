@@ -1,58 +1,99 @@
-.container{
-    width: 100%;
-    height: auto;
-
-}
-nav{
+.box-first-index {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 70%;
-    height: auto;
-    margin: auto;
+    height: 70px;
 }
 
-nav #sch-search{
+.box-first-index #sch-search {
     width: 400px;
     height: 40px;
     border: solid 1px grey;
 }
-nav button{
+
+.box-first-index button {
     width: 100px;
     height: 40px;
     border: solid 1px grey;
+    margin-left: 10px;
 }
 
-.type .div-type{
+/* type */
+.box-book-type {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 90px;
+}
+
+.div-type {
     width: 80%;
-    height: 40px;
+    /*height: 40px;*/
     font-size: 28px;
-    margin: auto;
-    margin-top: 15px;
+    /*margin: auto;*/
+    /*margin-top: 15px;*/
 }
 
-.book-type{
+.book-type {
     display: inline-block;
 }
 
-.type-value{
+.type-value {
     display: inline-block;
 }
-.div-type ul{
+
+.type-value ul {
     list-style: none;
-
 }
 
-.div-type ul li{
+.type-value ul li {
     float: left;
-    margin-left: 20px;
-
+    margin-left: 60px;
 }
-.div-type ul li a{
+
+.type-value ul li a {
     text-decoration: none;
     color: black;
     display: block;
-    height: 30px;
-    width: 80px;
+    height: 40px;
+    width: 60px;
 }
 
-.div-type ul li a:focus{
+.type-value ul li a:focus {
     background: grey;
+}
+
+/* order */
+.box-order {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: 40px;
+}
+
+.div-order a {
+    margin-left: 60px;
+}
+
+/*list*/
+.box-book-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 480px;
+}
+
+/*page*/
+.div-book-page{
+    display: flex;
+    width: 90%;
+    justify-content:flex-end;
+}
+.div-book-page button {
+    float: left;
+    margin-left: 5px;
 }

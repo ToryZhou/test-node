@@ -77,3 +77,82 @@
                     <li class="booktypevalue">
                         <a href="javascript:void 0">小说</a>
                     </li>
+
+
+
+.container{
+    width: 100%;
+    height: auto;
+
+}
+nav{
+    width: 70%;
+    height: auto;
+    margin: auto;
+}
+
+nav #sch-search-bak{
+    width: 400px;
+    height: 40px;
+    border: solid 1px grey;
+}
+nav button{
+    width: 100px;
+    height: 40px;
+    border: solid 1px grey;
+}
+
+.type .div-type{
+    width: 80%;
+    height: 40px;
+    font-size: 28px;
+    margin: auto;
+    margin-top: 15px;
+}
+
+.book-type{
+    display: inline-block;
+}
+
+.type-value{
+    display: inline-block;
+}
+.div-type ul{
+    list-style: none;
+
+}
+
+.div-type ul li{
+    float: left;
+    margin-left: 20px;
+
+}
+.div-type ul li a{
+    text-decoration: none;
+    color: black;
+    display: block;
+    height: 30px;
+    width: 80px;
+}
+
+.div-type ul li a:focus{
+    background: grey;
+}
+
+<div class="container">
+    <div >
+        <nav>
+            <input type="search" id="sch-search-bak">
+            <button id="btn-search-bak">serarch</button>
+        </nav>
+        <section class="type">
+            <div class="div-type">
+                <div class="book-type">书籍分类</div>
+                <div class="type-value" id="div-type-value-bak">
+                    <ul>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
