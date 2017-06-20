@@ -1,0 +1,7 @@
+.box-detail{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 350px;
+    width: 70%;
+}
