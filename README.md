@@ -70,3 +70,15 @@ Chrome浏览器密码框自动填充的bug
 <input type="password" style="width:0;height:0;float:left;visibility:hidden"/>
 <!-- 原先的input -->
 <input type="password"/>
+
+1.KISSY CSS Reset 1.0
+2.css命名空间 命名
+3.绝对位置定位 absolute
+    relative fixed static absolute
+    CSS中position属性( absolute | relative | static | fixed )详解
+    absolute | 相对与上一个relative的作偏移，如果是没有就找根
+    relative | 被别人挤成现在形状，然后相对与现在形状作偏移
+    static | 被别人挤成现在形状，不受top和left控制，这个是position默认属性
+    fixed fixed定位，又称为固定定位，它和absoult定位一样，都脱离了文档流，并且能够根据top、right、left、bottom属性进行定位，
+          但不同的是fixed是根据窗口为原点进行偏移定位的，也就是说它不会根据滚动条的滚动而进行偏移。
+4.span里面不能出现div,行级元素里面不能出现块级元素
