@@ -11,7 +11,8 @@ let route = function (request, response) {
 
 let book = {
     getBookList: function (request, response) {
-        bookDao.getBookList(function (data) {
+        var pagenation = querystring.parse(url.parse(request.url).query);
+        bookDao.getBookList(pagenation,function (data) {
             response.writeHead(200, {'content-type': 'text/html;charset=utf8', 'Access-Control-Allow-Origin': '*'});
             response.end(JSON.stringify(data));
             // response.end(data + '');

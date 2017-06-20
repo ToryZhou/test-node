@@ -88,12 +88,18 @@
 }
 
 /*page*/
-.div-book-page{
+.box-book-page{
     display: flex;
     width: 90%;
     justify-content:flex-end;
 }
-.div-book-page button {
+.box-book-page button {
     float: left;
     margin-left: 5px;
+}
+.box-book-page span {
+    float: left;
+    margin-left: 15px;
+    margin-top:4px;
+    width: 22px;
 }
