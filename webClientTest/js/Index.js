@@ -8,6 +8,7 @@ function Index() {
     this.$divBookPage = $('#div-book-page');
     this.page = 0;
     this.type = 0;
+    this.order = 'price';
     this.initEvents(this);
     this.loadBookTypeList();
     this.loadBookList();
@@ -21,7 +22,15 @@ Index.prototype.initEvents = function (_this) {
         _this.loadBookList(_this.$schSearch.val());
     });
     _this.$document.on('click', '[name="typeA"]', function () {
-        _this.type =$(this)[0].title;
+        _this.type = $(this)[0].title;
+        $('[name="typeA"]').removeClass('background-grey');
+        $(this).addClass('background-grey');
+        _this.loadBookList(_this.$schSearch.val());
+    });
+    _this.$document.on('click', '[name="orderA"]', function () {
+        _this.order = $(this)[0].title;
+        $('[name="orderA"]').removeClass('background-ff1717');
+        $(this).addClass('background-ff1717');
         _this.loadBookList(_this.$schSearch.val());
     });
 };
@@ -42,11 +51,13 @@ Index.prototype.loadBookList = function (name) {
     let _this = this;
     let page = this.page;
     let type = this.type;
+    let order = this.order;
     $.get(config.contextPath + '/books/getBookList?' + $.param({
             page: page,
             size: 4,
             name: name,
-            type: type
+            type: type,
+            order: order
         }), {}, function (data) {
         let result = JSON.parse(data);
         let bookList = result.bookList;

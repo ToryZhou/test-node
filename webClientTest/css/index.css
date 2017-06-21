@@ -61,8 +61,14 @@
     width: 60px;
 }
 
-.type-value ul li a:focus {
+/*.type-value ul li a:focus {*/
+    /*background: grey;*/
+/*}*/
+.background-grey{
     background: grey;
+}
+.background-ff1717{
+    background: #ff1717;
 }
 
 /* order */

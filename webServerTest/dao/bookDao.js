@@ -11,13 +11,14 @@ let bookDao = {
         let page = parseInt(pagenation.page);
         let size = parseInt(pagenation.size);
         let type = parseInt(pagenation.type);
+        let order = pagenation.order;
         let name = pagenation.name;
-        let sql = 'select * from book where name like ? order by price desc limit ?,?';
+        let sql = 'select * from book where name like ? order by ' + order + ' desc limit ?,?';
         let sqlCount = 'select count(*) as count from book  where name like ?';
         let sqlParam = ['%' + name + '%', page * size, size];
         let sqlCountParam = ['%' + name + '%'];
         if (type > 0) {
-            sql = 'select * from book where name like ? and book_type_id=? order by price desc limit ?,?';
+            sql = 'select * from book where name like ? and book_type_id=? order by ' + order + ' desc limit ?,?';
             sqlCount = 'select count(*) as count from book  where name like ? and book_type_id=?';
             sqlParam = ['%' + name + '%', type, page * size, size];
             sqlCountParam = ['%' + name + '%', type];
