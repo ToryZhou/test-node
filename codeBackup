@@ -176,3 +176,7 @@ page=0&size=4
     <button style="width: 30px;height: 30px;">2</button>
     <button style="width: 30px;height: 30px;">3</button>
     <button style="width: 50px;height: 30px;">末页</button>
+
+        console.log($(this));
+        console.log($(this)[0].title);
+        console.log(_this.type);

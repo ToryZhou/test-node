@@ -6,6 +6,8 @@ function Index() {
     this.$schSearch = $('#sch-search');
     this.$divBookList = $('#div-book-list');
     this.$divBookPage = $('#div-book-page');
+    this.page = 0;
+    this.type = 0;
     this.initEvents(this);
     this.loadBookTypeList();
     this.loadBookList();
@@ -15,7 +17,12 @@ Index.prototype.initEvents = function (_this) {
         _this.loadBookList(_this.$schSearch.val());
     });
     _this.$document.on('click', '[name="pageButton"]', function () {
-        _this.loadBookList(_this.$schSearch.val(), $(this).val());
+        _this.page = $(this).val();
+        _this.loadBookList(_this.$schSearch.val());
+    });
+    _this.$document.on('click', '[name="typeA"]', function () {
+        _this.type =$(this)[0].title;
+        _this.loadBookList(_this.$schSearch.val());
     });
 };
 
@@ -25,19 +32,21 @@ Index.prototype.loadBookTypeList = function () {
         for (let i = 0, length = bookTypeList.length; i < length; i++) {
             $('#div-type-value').find('ul').append(
                 `<li class="booktypevalue">
-                   <a href="javascript:void 0" name="typeA">${bookTypeList[i].type}</a>
+                   <a href="javascript:void 0" name="typeA" title="${bookTypeList[i].id}">${bookTypeList[i].type}</a>
                  </li>`
             );
         }
     });
 };
-Index.prototype.loadBookList = function (name, page) {
+Index.prototype.loadBookList = function (name) {
     let _this = this;
-    page = page ? page : 0;
+    let page = this.page;
+    let type = this.type;
     $.get(config.contextPath + '/books/getBookList?' + $.param({
             page: page,
             size: 4,
-            name: name
+            name: name,
+            type: type
         }), {}, function (data) {
         let result = JSON.parse(data);
         let bookList = result.bookList;
@@ -60,10 +69,6 @@ Index.prototype.loadBookList = function (name, page) {
             `<button name="pageButton" style="width: 50px;height: 30px;" value="0">首页</button>`
         );
         for (let i = 0; i < result.pageCount; i++) {
-            console.log(i);
-            console.log(page);
-            console.log("====");
-
             if (i == page) {
                 _this.$divBookPage.append(
                     `<span style="height: 30px;">${i + 1}</span>`
