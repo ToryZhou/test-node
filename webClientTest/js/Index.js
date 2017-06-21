@@ -25,7 +25,7 @@ Index.prototype.loadBookTypeList = function () {
         for (let i = 0, length = bookTypeList.length; i < length; i++) {
             $('#div-type-value').find('ul').append(
                 `<li class="booktypevalue">
-                   <a href="javascript:void 0">${bookTypeList[i].type}</a>
+                   <a href="javascript:void 0" name="typeA">${bookTypeList[i].type}</a>
                  </li>`
             );
         }
