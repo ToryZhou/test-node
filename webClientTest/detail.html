@@ -5,6 +5,9 @@
     <title>Detail</title>
     <link rel="stylesheet" href="css/detail.css">
     <link rel="stylesheet" href="css/main.css">
+    <script src="js/main.js"></script>
+    <script src="js/detail.js"></script>
+    <script src="js/jquery-3.2.1.min.js"></script>
 </head>
 <body>
 <div class="box-detail">
@@ -12,7 +15,7 @@
         <div style="display: inline-block">
             <img src="image/zzdx.jpg" height="200" width="200"/>
         </div>
-        <div style="display: inline-block">
+        <div style="display: inline-block" id="div-detail">
             <span style="font-size: 28px;">浮生六计</span>
             <p style="font-size: 15px;">价格:$27.00</p>
             <p style="font-size: 15px;">已销售:<span style="color: #ff1717;">29,000</span></p>
@@ -28,7 +31,7 @@
     <textarea name="comment" id="txt-comment" cols="50" rows="10"></textarea>
     <div style="width: 50px;position: relative;left: 300px">
     <!--<div >-->
-        <button>提交</button>
+        <button id="btn-comment">提交</button>
     </div>
 </div>
 <br />
@@ -53,4 +56,9 @@
     <pan>Fixed</pan>
 </div>
 </body>
+<script>
+    $(function () {
+        let detail = new Detail();
+    });
+</script>
 </html>

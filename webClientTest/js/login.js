@@ -32,7 +32,7 @@ Login.prototype.initEvents = function (_this) {
         _this.$chbRemember.prop('checked', true);
         _this.$txtPhone.val(user.phone);
         _this.$pwdPassword.val(user.password);
-    }else{
+    } else {
         _this.$txtPhone.val('');
         _this.$pwdPassword.val('');
     }
@@ -51,6 +51,8 @@ Login.prototype.btnLoginClick = function () {
         if (data <= 0) {
             _this.$pPasswordError.html('用户名或密码错误.');
         } else {
+            document.cookie = "phone=" + phone;
+            document.cookie = "password=" + password;
             let isRem = _this.$chbRemember.prop('checked');
             if (isRem) {
                 localStorage.setItem('isRem', isRem);

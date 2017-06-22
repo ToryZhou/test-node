@@ -6,6 +6,12 @@ function Index() {
     this.$schSearch = $('#sch-search');
     this.$divBookList = $('#div-book-list');
     this.$divBookPage = $('#div-book-page');
+    this.$spnInfo = $('#spn-info');
+    this.$divLogin = $('#div-login');
+    this.$divLogged = $('#div-logged');
+
+    this.$divLogged = $('#div-logged');
+
     this.page = 0;
     this.type = 0;
     this.order = 'price';
@@ -14,6 +20,30 @@ function Index() {
     this.loadBookList();
 }
 Index.prototype.initEvents = function (_this) {
+    let split = document.cookie.split(";");
+    let isLogin = false;
+    split.forEach(function (item) {
+        if (item.indexOf('phone') >= 0) {
+            isLogin = true;
+            let phone = item.split('=');
+            _this.$spnInfo.html(phone[1]);
+            _this.$divLogin.addClass('hidden');
+            _this.$divLogged.removeClass('hidden');
+        }
+    });
+    if (!isLogin) {
+        _this.$spnInfo.empty();
+        _this.$divLogin.removeClass('hidden');
+        _this.$divLogged.addClass('hidden');
+    }
+
+    _this.$document.on('click', '#a-logout', function () {
+        let date = new Date();
+        date.setTime(date.getTime() - 1);
+        document.cookie = "phone=; expires=" + date.toUTCString();
+        document.cookie = "password=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
+    });
+
     _this.$document.on('click', '#btn-search', function () {
         _this.loadBookList(_this.$schSearch.val());
     });
@@ -62,11 +92,12 @@ Index.prototype.loadBookList = function (name) {
         let result = JSON.parse(data);
         let bookList = result.bookList;
         _this.$divBookList.empty();
+        localStorage.setItem('bookList',JSON.stringify(bookList));
         for (let i = 0, length = bookList.length; i < length; i++) {
             let book = bookList[i];
             _this.$divBookList.append(
                 `    <div style="margin-left: 40px;border: 1px solid rgba(19,20,23,0.46);padding: 6px">
-                        <img src="image/zzdx.jpg" height="200" width="200"/>
+                        <a href="detail.html?id=${book.id}"><img src="image/zzdx.jpg" height="200" width="200"/></a>
                         <p style="font-size: 20px;">${book.name}</p>
                         <p style="font-size: 15px;">价格:$${book.price}</p>
                         <p style="font-size: 15px;">已销售:<span style="color: #ff1717;">${book.sale_count}</span></p>
