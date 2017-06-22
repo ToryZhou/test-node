@@ -1,6 +1,5 @@
 'use strict'
 let http = require('http');
-let qstring = require('querystring');
 let url = require('url');
 
 let user = require('./users/user');
