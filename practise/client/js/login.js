@@ -3,13 +3,15 @@
  */
 
 function Login() {
-    this.$document=$(document);
+    this.$document = $(document);
+    this.initEvents(this);
 }
 
-Login.prototype.initEvents=function (_this) {
-    
-}
+Login.prototype.initEvents = function (_this) {
+    console.log('====');
 
-Login.prototype.click=function () {
-    
-}
+};
+
+Login.prototype.click = function () {
+
+};
