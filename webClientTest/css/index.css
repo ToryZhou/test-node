@@ -1,3 +1,8 @@
+@media screen and (max-width: 3000px) {
+    body {
+        background-color:lightblue;
+    }
+}
 
 .a-login{
     color: #428bca;

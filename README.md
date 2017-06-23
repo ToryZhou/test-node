@@ -126,5 +126,6 @@ Chrome浏览器密码框自动填充的bug
    _this.$txtPhone.blur(function () {
            _this.txtPhoneBlur();
        });
+14.适配 @media only screen and (max-width: 500px) 当文档宽度小于500,这个里面的定义生效
 
 
