@@ -87,3 +87,44 @@ Chrome浏览器密码框自动填充的bug
      Note：使用static 定位或无position定位的元素z-index属性是无效的。
 4.span里面不能出现div,行级元素里面不能出现块级元素
 5.圣杯布局和双飞翼布局
+
+需要记忆：
+后端
+1.连数据库
+2.路由
+3.取get,post参数
+4.返回的writeHeader里面的值
+5.module.exports
+前端
+1.需要多写一个password框
+2.定义JS文件里面的文件结构
+3.删取localStorage,cookie
+4.页面跳转传参 location.search
+5.flex显示的垂直和水平居中
+6.position的几种值布局
+7.去掉下划线，没有列表样式，在同一行
+    border: solid 1px grey;
+    list-style: none;
+    display: inline-block;
+    box-shadow:
+            inset 0 5px white,
+            inset 0 -5px #bbb,
+            inset 5px 0 #d7d7d7,
+            inset -5px 0 #d7d7d7;
+    border: solid 1px grey;
+8.$.param({}) 传参
+9.es6 模板参数${book.id}
+10._this.$chbRemember.prop('checked', true); ckeckbox设置
+   let isRem = _this.$chbRemember.prop('checked');checkbos取值
+11.正则
+       let reg = /^1[345678][0-9]{9}$/;
+       let isPhone = reg.test(phone);
+12.$(window).attr('location', 'index.html');打开窗口
+    window.location='index.html';
+    window.open('index.html');
+13.失去焦点事件
+   _this.$txtPhone.blur(function () {
+           _this.txtPhoneBlur();
+       });
+
+
