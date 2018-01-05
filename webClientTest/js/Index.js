@@ -45,6 +45,27 @@ Index.prototype.initEvents = function (_this) {
     });
 
     _this.$document.on('click', '#btn-search', function () {
+        console.log('--------');
+        $.get('http://127.0.0.1:8088/pay/pay-method', function (data) {
+            console.log(data);
+        });
+        $.ajax({
+            url: 'http://ci-passport.zhihuiya.com:80/loginsubmit',
+            type: "POST",
+            contentType: "application/x-www-form-urlencoded",
+            data: {
+                username: 'test_passport@patsnap.com',
+                password: 'patsnap123',
+                client_id: '10',
+                response_type: 'TOKEN'
+            },
+            success: function (data) {
+                console.log(data);
+            },
+            error: function (error) {
+                console.log(error);
+            }
+        });
         _this.loadBookList(_this.$schSearch.val());
     });
     _this.$document.on('click', '[name="pageButton"]', function () {
